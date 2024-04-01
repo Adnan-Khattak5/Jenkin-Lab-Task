@@ -10,17 +10,25 @@ pipeline {
             }
           }
         
+        stage('Test') {
+            steps {
+               
+                    sh "sudo npm-test"
+                
+            }
+        }
+        
         stage('Docker Comopse Up') {
             steps {
                
-                    sh "docker compose up"
+                    sh "sudo docker-compose-up"
                 
             }
         }
          stage('kill') {
             steps {
                
-                    sh "docker compose down"
+                    sh "sudo docker-compose-down"
                 
             }
         }
