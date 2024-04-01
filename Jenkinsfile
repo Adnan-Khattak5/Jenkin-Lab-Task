@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                // Checks out the source code from the configured SCM repository
+                git branch: 'main', url: 'https://github.com/Adnan-Khattak5/Jenkin-Lab-Task.git'
                 checkout scm
             }
         }
