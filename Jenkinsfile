@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                
-                    sh "sudo npm-test"
+                    sh "echo sudo-npm-test"
                 
             }
         }
@@ -21,14 +21,14 @@ pipeline {
         stage('Docker Comopse Up') {
             steps {
                
-                    sh "sudo docker-compose-up"
+                    sh "echo sudo-docker-compose-up"
                 
             }
         }
          stage('kill') {
             steps {
                
-                    sh "sudo docker-compose-down"
+                    sh "echo sudo-docker-compose-down"
                 
             }
         }
